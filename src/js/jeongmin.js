@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         });
     }
 
+
     // 팀원 추가 이미지 업로드 버튼 기능 추가
     document.getElementById("upload-btn").addEventListener("click",
         function (e) {
