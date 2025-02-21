@@ -94,8 +94,9 @@ document.addEventListener("DOMContentLoaded", async function () {
             const blogElement = members.find(member => member.docId == memberId)?.blog || null;
             const planElement = members.find(member => member.docId == memberId)?.plan || null;
 
-            console.log("imgElement:"+imgElement);
-            console.log("modalImage:"+modalImage.src);
+            console.log("imgElement:" + imgElement);
+            console.log("modalImage:" + modalImage.src);
+
             // 모달에 데이터 적용
             modalImage.src = imgElement;
             nameInput.value = nameElement;
@@ -116,15 +117,15 @@ document.addEventListener("DOMContentLoaded", async function () {
             modal2.style.display = "flex";
             fullScreen.classList.remove("display-none");
             modal2.querySelector("#modal-update-image").src =
-                `../asset/memberImages/${imageArray[Math.floor(Math.random() * imageArray.length)]}`;       // 팀원 추가 시 랜덤 이미지 출력
+                `asset/memberImages/${imageArray[Math.floor(Math.random() * imageArray.length)]}`;       // 팀원 추가 시 랜덤 이미지 출력
         });
     }
 
     // 팀원 추가 이미지 업로드 버튼 기능 추가
-    document.getElementById("upload-btn").addEventListener("click", 
+    document.getElementById("upload-btn").addEventListener("click",
         function (e) {
             document.getElementById("modal-update-image").src =
-            `../asset/memberImages/${imageArray[Math.floor(Math.random() * imageArray.length)]}`;       // 프로필 업로드 버튼 클릭 시 랜덤 이미지 출력
+                `asset/memberImages/${imageArray[Math.floor(Math.random() * imageArray.length)]}`;       // 프로필 업로드 버튼 클릭 시 랜덤 이미지 출력
         })
 
     // 모달1 닫기 (x클릭시)
